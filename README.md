@@ -7,7 +7,5 @@ Not all modules you need to install, Some of these may be already installed as d
 
 3. Ensure the availability of internet connection. Otherwise PARTIAL AND INCOMPLETE RESULT may be generated, which could be different from the actual result. 
 
-4. The python program can be run by two ways.
-	a. By running the python file from any terminal (in Linux) or command prompt (in Windows) using the command "python RepositoryMining.py"
-	b. By running the "RepositoryMining.ipynb" using jupyter notebook or jupyter lab
+4. The python program can be run by two ways -	a) by running the python file from any terminal (in Linux) or command prompt (in Windows) using the command "python RepositoryMining.py", and b) by running the "RepositoryMining.ipynb" using jupyter notebook or jupyter lab
 	
