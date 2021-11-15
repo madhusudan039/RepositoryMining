@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import statistics as stats
 
-#Definition of repoMining class
+# Definition of repoMining class
 class repoMining:
     def __init__(self, chrome_driver_address, debug=False):
         chrome_options = Options()
@@ -18,7 +18,6 @@ class repoMining:
         chrome_options.add_argument('headless')
         
         self.driver = webdriver.Chrome(chrome_driver_address,options=chrome_options)
-     
         
         # Configuring whether output messages will be printed for debugging purpose
         self.debug = debug
@@ -164,8 +163,6 @@ class repoMining:
                     print("==== Older URL====", url)
                     is_loop = True
                     break
-
-
 
         return commit_dict, 0
     
