@@ -94,13 +94,11 @@ class repoMining:
                 if header is None:
                     continue
                 header_info = header.get_text()
-                
-                if self.debug == True:
-                    print("Header Information: "+ header_info)
-                    
-                print('============= Commits from ',self.getDuration(header_info), " days ago =============")
                     
                 if int(self.getDuration(header_info)) <= number_of_days:
+                    if self.debug == True:
+                        print("Header Information: "+ header_info)
+                    print('============= Commits from ',self.getDuration(header_info), " days ago =============")
                     # Getting all of a commits of a day with corresponding messages
                     for link_tag in element.findAll('li'):
                         commit_message = link_tag.find('p')
@@ -305,10 +303,8 @@ def main():
     topK = 12
     number_of_days = 180
     commit_url = "https://github.com/openstack/nova/commits/master/nova"
-#     commit_url = "https://github.com/openstack/nova/commits/master?after=e28afc564700a1a35e3bf0269687d5734251b88a+244&branch=master&path%5B%5D=nova"
     
-    
-    rm = repoMining(chrome_driver_address= chrome_driver_address, debug=True)
+    rm = repoMining(chrome_driver_address= chrome_driver_address, debug=False)
     module_list = rm.getModules(main_url)
     print(module_list)
 
